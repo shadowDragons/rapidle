@@ -1,7 +1,5 @@
 # Rapidle
 
-[English](README.md) | [中文](README-zh.md)
-
 一个简约的桌面效率工具，支持记忆片段、快速访问链接、第三方 API 请求和快速启动系统应用。
 
 ![rapidle-demo.gif](https://85b83fbf.cloudflare-imgbed-3ws.pages.dev/file/1737688882415_rapidle-demo.gif)
