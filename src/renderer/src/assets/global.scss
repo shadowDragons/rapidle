@@ -1,0 +1,27 @@
+body {
+  @apply w-screen h-screen;
+}
+* {
+  opacity: 0.995;
+}
+
+.drag {
+  -webkit-app-region: drag;
+}
+
+.nodrag,
+input,
+select,
+textarea,
+option {
+  -webkit-app-region: no-drag;
+}
+
+.contextMenu {
+  @apply rounded-md;
+  button {
+    @apply bg-[#2c3e50] text-white px-3 py-1 hover:bg-[#34495e];
+    & > div {
+    }
+  }
+}

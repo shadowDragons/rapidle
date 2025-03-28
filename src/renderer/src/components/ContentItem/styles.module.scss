@@ -1,0 +1,7 @@
+.link {
+  @apply truncate py-[6px] px-1 cursor-pointer flex items-center gap-1 border-b mx-2 my-1 hover:bg-slate-100;
+}
+
+.active {
+  @apply bg-blue-600 text-white rounded-md border-none hover:bg-blue-600;
+}

@@ -1,0 +1,12 @@
+.container {
+  @apply w-screen space-x-10 text-sm border-b px-2;
+  display: flex;
+}
+
+.container > div {
+  @apply h-5 my-10;
+}
+
+.container > div input {
+  @apply h-10 px-2;
+}

@@ -1,0 +1,47 @@
+.tools-page {
+  @apply h-full flex flex-col bg-white;
+
+  .page-header {
+    @apply sticky top-0 bg-white border-b z-20;
+
+    .header-content {
+      @apply px-6 py-4 flex items-center justify-between;
+
+      h2 {
+        @apply text-lg font-medium text-gray-800;
+      }
+
+      .add-btn {
+        @apply flex items-center gap-1.5 px-3 py-1.5
+               text-sm font-medium text-white bg-blue-600
+               rounded-md hover:bg-blue-700 transition-colors;
+      }
+    }
+  }
+
+  .table-container {
+    @apply flex-1 overflow-y-auto px-6 pb-6 relative;
+
+    .table-header {
+      @apply flex items-center py-3 text-sm font-medium text-gray-500 border-b
+             sticky top-0 bg-white z-10 -mx-6 px-6;
+
+      .col-name {
+        @apply w-1/6;
+      }
+      .col-abbr {
+        @apply w-1/12;
+      }
+      .col-url {
+        @apply w-2/3;
+      }
+      .col-action {
+        @apply w-1/12 text-right;
+      }
+    }
+
+    .table-body {
+      @apply space-y-2 pt-3;
+    }
+  }
+}

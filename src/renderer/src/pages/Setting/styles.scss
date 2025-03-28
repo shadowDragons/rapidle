@@ -1,0 +1,23 @@
+.setting-page {
+  @apply bg-gray-100 min-h-screen p-8;
+
+  h1 {
+    @apply text-2xl font-bold text-center mb-8 text-gray-800;
+  }
+
+  .setting-card {
+    @apply mb-8 shadow-md;
+
+    .ant-card-head-title {
+      @apply text-lg font-semibold text-gray-700;
+    }
+
+    .ant-input {
+      @apply text-base;
+    }
+  }
+
+  .save-button {
+    @apply block mx-auto;
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "name": "Rapidle",
+  "version": "1.0.0",
+  "description": "一个基于 Electron、React 和 TypeScript 的效率工具应用",
+  "author": {
+    "name": "Junexus",
+    "email": "shadowdragon4399@gmail.com"
+  },
+  "main": "./out/main/index.js",
+  "homepage": "https://byte.ink",
+  "repository": "https://github.com/shadowDragons/rapidle",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
+    "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
+    "typecheck": "npm run typecheck:node && npm run typecheck:web",
+    "start": "electron-vite preview",
+    "dev": "electron-vite dev",
+    "build": "npm run typecheck && electron-vite build",
+    "postinstall": "electron-builder install-app-deps",
+    "build:unpack": "npm run build && electron-builder --dir",
+    "build:win": "cross-env NODE_ENV=production electron-builder --win --config",
+    "build:mac": "electron-vite build && electron-builder --mac",
+    "build:linux": "electron-vite build && electron-builder --linux"
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^3.0.0",
+    "@electron-toolkit/utils": "^3.0.0",
+    "@emotion/is-prop-valid": "^1.2.2",
+    "@icon-park/react": "^1.4.2",
+    "@remix-run/router": "^1.15.3",
+    "@tabler/icons-react": "^3.24.0",
+    "@types/better-sqlite3": "^7.6.10",
+    "@types/mockjs": "^1.0.10",
+    "antd": "^5.16.2",
+    "better-sqlite3": "^9.5.0",
+    "classnames": "^2.5.1",
+    "clsx": "^2.1.1",
+    "dayjs": "^1.11.11",
+    "dotenv": "^16.4.5",
+    "electron-updater": "^6.2.1",
+    "localforage": "^1.10.0",
+    "lucide-react": "^0.446.0",
+    "mantine-contextmenu": "^7.9.1",
+    "match-sorter": "^6.3.4",
+    "mockjs": "^1.1.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.10.2",
+    "react-markdown": "^9.0.1",
+    "react-router-dom": "^6.22.3",
+    "remark-gfm": "^4.0.0",
+    "sort-by": "^1.2.0",
+    "styled-components": "^6.1.8",
+    "uuid": "^10.0.0",
+    "zustand": "^4.5.2"
+  },
+  "devDependencies": {
+    "@electron-toolkit/eslint-config-prettier": "^2.0.0",
+    "@electron-toolkit/eslint-config-ts": "^1.0.1",
+    "@electron-toolkit/tsconfig": "^1.0.1",
+    "@types/node": "^18.19.9",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "@types/uuid": "^10.0.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.18",
+    "cross-env": "^7.0.3",
+    "dotenv-cli": "^7.4.1",
+    "electron": "^28.2.0",
+    "electron-builder": "^24.9.1",
+    "electron-rebuild": "^3.2.9",
+    "electron-vite": "^2.0.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "postcss": "^8.4.35",
+    "prettier": "^3.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.72.0",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12"
+  },
+  "build": {
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "icon": "resources/icon.png"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "开发工具",
+      "icon": "resources/icon.png"
+    },
+    "mac": {
+      "icon": "resources/icon.png",
+      "extendInfo": {
+        "NSMicrophoneUsageDescription": "我们需要访问您的麦克风以支持音频功能。",
+        "NSCameraUsageDescription": "我们需要访问您的摄像头以支持视频功能。"
+      }
+    }
+  }
+}

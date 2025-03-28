@@ -1,0 +1,52 @@
+.tool-item {
+  @apply bg-white rounded-lg;
+
+  .tool-form {
+    @apply flex items-center gap-3;
+
+    .ant-form-item {
+      @apply mb-0;
+    }
+
+    .name {
+      @apply w-1/6;
+
+      input {
+        @apply rounded-md;
+      }
+    }
+
+    .abbr {
+      @apply w-1/12;
+
+      input {
+        @apply rounded-md;
+      }
+    }
+
+    .url {
+      @apply w-2/3;
+
+      input {
+        @apply rounded-md;
+      }
+    }
+
+    .actions {
+      @apply w-1/12 flex justify-end;
+
+      button {
+        @apply flex items-center justify-center w-8 h-8 rounded-md
+               hover:bg-gray-100 transition-colors;
+
+        &.save-btn {
+          @apply text-blue-600 hover:bg-blue-50;
+        }
+
+        &.delete-btn {
+          @apply text-red-600 hover:bg-red-50;
+        }
+      }
+    }
+  }
+}

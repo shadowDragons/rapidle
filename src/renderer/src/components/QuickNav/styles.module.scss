@@ -1,0 +1,46 @@
+@mixin commonLink {
+  @apply px-2 py-2 truncate cursor-pointer block mx-1;
+}
+
+.quicknav {
+  @apply sticky top-[0] bg-white;
+  margin: -0.25rem -0.25rem 0.25rem -0.25rem;
+  z-index: 15;
+
+  &::before {
+    content: '';
+    @apply absolute inset-0 bg-white;
+    margin: -0.5px;
+    z-index: -1;
+  }
+
+  .quicknav_content {
+    @apply p-1 border-b;
+  }
+}
+
+.link {
+  @apply flex items-center gap-1 px-2 py-1.5 rounded-md text-gray-700
+         hover:bg-gray-100 transition-colors;
+
+  svg {
+    @apply text-gray-500;
+  }
+
+  span {
+    @apply text-sm font-medium truncate;
+  }
+}
+
+.active {
+  @apply flex items-center gap-1 px-2 py-1.5 rounded-md
+         bg-blue-50 text-blue-700;
+
+  svg {
+    @apply text-blue-600;
+  }
+
+  span {
+    @apply text-sm font-medium truncate;
+  }
+}

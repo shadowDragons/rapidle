@@ -1,0 +1,40 @@
+$height: 30px;
+@mixin commonLink {
+  @apply px-2 py-2 truncate cursor-pointer block mx-1 my-1 rounded-md;
+  height: $height;
+  -webkit-user-drag: none;
+}
+.link {
+  @apply flex items-center gap-2 px-3 py-2 rounded-md text-gray-700
+         hover:bg-gray-100 transition-colors;
+
+  svg {
+    @apply text-gray-500;
+  }
+
+  span {
+    @apply text-sm font-medium truncate;
+  }
+}
+
+.active {
+  @apply flex items-center gap-2 px-3 py-2 rounded-md
+         bg-blue-50 text-blue-700;
+
+  svg {
+    @apply text-blue-600;
+  }
+
+  span {
+    @apply text-sm font-medium truncate;
+  }
+}
+
+.input {
+  @apply px-3 py-2;
+
+  input {
+    @apply w-full px-3 py-1.5 text-sm border rounded-md
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+}

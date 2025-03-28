@@ -1,0 +1,54 @@
+.category {
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  .category-list {
+    width: 250px;
+    border-right: 1px solid #eee;
+    overflow-y: auto;
+    background: #fff;
+
+    .category-header {
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+
+      h2 {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+
+      .add-category-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 0.375rem;
+        background: #f3f4f6;
+        color: #374151;
+        font-size: 0.875rem;
+        width: 100%;
+
+        &:hover {
+          background: #e5e7eb;
+        }
+
+        span {
+          font-size: 0.875rem;
+        }
+      }
+    }
+
+    // 分类列表容器
+    > div:last-child {
+      padding: 0.5rem;
+    }
+  }
+
+  .category-content {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+  }
+}
